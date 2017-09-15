@@ -5,20 +5,20 @@ import {Doctor} from "./../js/doctor.js";
 $(document).ready(function() {
 
   function display(doctors) {
-    if(response.data.length == 0){
-      $("#result").text("Sorry, no doctors match your search criteria")
+    if(doctors.length == 0){
+      $("#result").text("Sorry, no doctors match your search criteria");
     }else{
       doctors.forEach(function(doctor) {
-      $("#result").append("<li>" + doctor + "</li>");
+      $("#result").append("<li>" + doctor.first_name + "</li>");
       });
     }
   }
   function displayDocByName(docNames) {
-    if(response.data.length == 0){
-      $("#output").text("Sorry, no doctors match your search criteria")
+    if(docNames.length == 0){
+      $("#output").text("Sorry, no doctors match your search criteria");
     }else{
       docNames.forEach(function(thisDoc) {
-      $("#output").append("<li>" + thisDoc + "</li>");
+      $("#output").append("<li>" + thisDoc.last_name + "</li>");
       });
     }
   }

@@ -8,14 +8,12 @@ export let Doctor = {
         format: "json"
       },
       success: (response) => {
-        // $("#result").text(`For this ${medIssue}, see ${doctor.profile.first_name}`);
         this.filterData(response, display);
       },
       error: function() {
         $('#error').text('Something is wrong.  Try again.');
       }
     });
-    console.log("hi" + response);
   },
 
 
@@ -44,12 +42,12 @@ export let Doctor = {
         {
             first_name: doctor.profile.first_name,
             last_name: doctor.profile.last_name,
-            street_address: doctor.practices.visit_address.street,
-            city: doctor.practices.visit_address.city,
-            state: doctor.practices.visit_address.state,
-            zip: doctor.practices.visit_address.zip,
-            phone: doctor.practices.phone.number,
-            accept_newPatient: doctor.practices.accepts_new_patients
+            street: doctor.practices.visit_address.street,
+            // city: doctor.practices.visit_address.city,
+            // state: doctor.practices.visit_address.state,
+            // zip: doctor.practices.visit_address.zip,
+            // phone: doctor.practices.phone.number,
+            // accept_newPatient: doctor.practices.accepts_new_patients
         });
 
       });
@@ -62,14 +60,14 @@ export let Doctor = {
 
       docNames.push(
         {
-            first_name: doctor.profile.first_name,
-            last_name: doctor.profile.last_name,
-            street_address: doc.practices.visit_address.street,
-            city: doc.practices.visit_address.city,
-            state: doc.practices.visit_address.state,
-            zip: doc.practices.visit_address.zip,
-            phone: doc.practices.phone.number,
-            accept_newPatient: doc.practices.accepts_new_patients
+            first_name: doc.profile.first_name,
+            last_name: doc.profile.last_name,
+            // street: doc.practices.visit_address.street,
+            // city: doc.practices.visit_address.city,
+            // state: doc.practices.visit_address.state,
+            // zip: doc.practices.visit_address.zip,
+            // phone: doc.practices.phone.number,
+            // accept_newPatient: doc.practices.accepts_new_patients
         });
 
       });
