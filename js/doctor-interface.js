@@ -4,21 +4,22 @@ import {Doctor} from "./../js/doctor.js";
 
 $(document).ready(function() {
 
-  function display(doctors) {
+  function display(doctors, details) {
     if(doctors.length == 0){
       $("#result").text("Sorry, no doctors match your search criteria");
     }else{
       doctors.forEach(function(doctor) {
-      $("#result").append("<li>" + doctor.first_name + "</li>");
+      $("#result").append("<li>" + doctor.name + "</li>");
       });
     }
   }
+  
   function displayDocByName(docNames) {
     if(docNames.length == 0){
       $("#output").text("Sorry, no doctors match your search criteria");
     }else{
       docNames.forEach(function(thisDoc) {
-      $("#output").append("<li>" + thisDoc.last_name + "</li>");
+      $("#output").append("<li>" + thisDoc.name + "</li>");
       });
     }
   }

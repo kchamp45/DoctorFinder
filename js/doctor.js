@@ -36,21 +36,27 @@ export let Doctor = {
 
   filterData: function(response, display) {
     let doctors = [];
+
     response.data.forEach(function(doctor) {
 
       doctors.push(
         {
-            first_name: doctor.profile.first_name,
-            last_name: doctor.profile.last_name,
-            street: doctor.practices.visit_address.street,
+          name: doctor.profile.first_name + " " + doctor.profile.last_name
+
+        });
+    });
+    // response.data.practices.forEach(function(detail){
+    //   details.push(
+    //     {
+    //       street: detail.visit_address.street
+    //     });
+    // });
+
             // city: doctor.practices.visit_address.city,
             // state: doctor.practices.visit_address.state,
             // zip: doctor.practices.visit_address.zip,
             // phone: doctor.practices.phone.number,
             // accept_newPatient: doctor.practices.accepts_new_patients
-        });
-
-      });
       display(doctors);
   },
 
@@ -60,8 +66,8 @@ export let Doctor = {
 
       docNames.push(
         {
-            first_name: doc.profile.first_name,
-            last_name: doc.profile.last_name,
+            name: doc.profile.first_name + " " + doc.profile.last_name
+
             // street: doc.practices.visit_address.street,
             // city: doc.practices.visit_address.city,
             // state: doc.practices.visit_address.state,
