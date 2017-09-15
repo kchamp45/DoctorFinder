@@ -17,19 +17,19 @@ $(document).ready(function() {
     if(response.data.length == 0){
       $("#output").text("Sorry, no doctors match your search criteria")
     }else{
-      docNames.forEach(function(name) {
-      $("#output").append("<li>" + name + "</li>");
+      docNames.forEach(function(thisDoc) {
+      $("#output").append("<li>" + thisDoc + "</li>");
       });
     }
   }
-  
-  $("#userMedIss").submit(function(e) {
+
+  $("#med-form").submit(function(e) {
     e.preventDefault();
     let medIssue = $("#problem").val();
     let doctors = Doctor.findDoctors(medIssue, display);
   });
 
-  $("#inputName").submit(function(e) {
+  $("#name-form").submit(function(e) {
     e.preventDefault();
     let name = $("#name").val();
     let docNames = Doctor.findDocByName(name, displayDocByName);
