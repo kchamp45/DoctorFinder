@@ -2,7 +2,7 @@ export let Doctor = {
 
   findDoctors: function(medIssue, display) {
     $.ajax({
-      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${medIssue}&location=or-portland&skip=0&limit=10&user_key=${apiKey}`,
+      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${medIssue}&location=or-portland&skip=0&limit=10&user_key=37c943cb133d57f40082b6c642897205`,
       type: "GET",
       data: {
         format: "json"
@@ -19,7 +19,7 @@ export let Doctor = {
 
   findDocByName: function(name, displayDocByName){
     $.ajax({
-      url:  `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=or-portland&skip=0&limit=10&user_key=${apiKey}`,
+      url:  `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=or-portland&skip=0&limit=10&user_key=37c943cb133d57f40082b6c642897205`,
 
       type: "GET",
       data: {
@@ -41,18 +41,9 @@ export let Doctor = {
 
       doctors.push(
         {
-          name: doctor.profile.first_name + " " + doctor.profile.last_name,
-          street: doctor.practices[0].visit_address.street,
-          city: doctor.practices[0].visit_address.city,
-          state: doctor.practices[0].visit_address.state,
-          zip: doctor.practices[0].visit_address.zip,
-          phone: doctor.practices[0].phones[0].number,
-          newPatient: doctor.practices[0].accepts_new_patients
-
+          name: doctor.profile.first_name + " " + doctor.profile.last_name
         });
     });
-
-
 
       display(doctors);
   },
@@ -69,7 +60,7 @@ export let Doctor = {
             state: doc.practices[0].visit_address.state,
             zip: doc.practices[0].visit_address.zip,
             phone: doc.practices[0].phones[0].number,
-            accept_newPatient: doc.practices[0].accepts_new_patients
+            newPatient: doc.practices[0].accepts_new_patients
         });
 
       });

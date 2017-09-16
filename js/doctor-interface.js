@@ -8,23 +8,16 @@ $(document).ready(function() {
     if(doctors.length == 0){
       $("#result").text("Sorry, no doctors match your search criteria");
     }else{
-      let answer = "";
       doctors.forEach(function(doctor) {
-        doctor.forEach(function(eachDoc){
-        if(doctor.newPatient === true) {
-          answer = "yes";
-        } else {
-          answer = "no";
-        }
-        $("#result").text(eachDoc.name + "<br>" + doctor.street + "<br>" + doctor.city +  "<br>" + doctor.state + "<br>" + doctor.zip +  "<br>" + doctor.phone + "<br>" + "accepts new patients:" + " " + answer);
-        })
+
+        $("#result").append("<li>" + doctor.name + "</li>");
+      });
       }
     }
-  }
 
   function displayDocByName(docNames) {
     if(docNames.length == 0){
-      $("#output").text("Sorry, no doctors match your search criteria");
+      $("#output").text("Sorry, the doctor you're looking for is not in our database");
     }else{
       let answer = "";
       docNames.forEach(function(thisDoc) {
@@ -33,8 +26,8 @@ $(document).ready(function() {
         } else {
           answer = "no";
         }
-        $("#output").append(thisDoc.name + "<br>" + thisDoc.street + "<br>" + thisDoc.city +  "<br>" + thisDoc.state + "<br>" + thisDoc.zip +  "<br>" + thisDoc.phone + "<br>" + "accepts new patients:" + " " + answer);
-      })
+        $("#output").append(thisDoc.name + "<br>" + thisDoc.street + "<br>" + thisDoc.city +  "<br>" + thisDoc.state + "<br>" + thisDoc.zip +  "<br>" + thisDoc.phone + "<br>" + "accepts new patients:" + " " + answer + "<br>");
+      });
     }
   }
 
