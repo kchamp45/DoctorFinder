@@ -10,13 +10,15 @@ $(document).ready(function() {
     }else{
       let answer = "";
       doctors.forEach(function(doctor) {
+        doctor.forEach(function(eachDoc){
         if(doctor.newPatient === true) {
           answer = "yes";
         } else {
           answer = "no";
         }
-        $("#result").append(doctor.name + "<br>" + doctor.street + "<br>" + doctor.city +  "<br>" + doctor.state + "<br>" + doctor.zip +  "<br>" + doctor.phone + "<br>" + "accepts new patients:" + " " + answer);
-      })
+        $("#result").text(eachDoc.name + "<br>" + doctor.street + "<br>" + doctor.city +  "<br>" + doctor.state + "<br>" + doctor.zip +  "<br>" + doctor.phone + "<br>" + "accepts new patients:" + " " + answer);
+        })
+      }
     }
   }
 
