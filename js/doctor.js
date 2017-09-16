@@ -2,7 +2,7 @@ export let Doctor = {
 
   findDoctors: function(medIssue, display) {
     $.ajax({
-      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${medIssue}&location=or-portland&skip=0&limit=10&user_key=37c943cb133d57f40082b6c642897205`,
+      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${medIssue}&location=or-portland&skip=0&limit=10&user_key=${apiKey}`,
       type: "GET",
       data: {
         format: "json"
@@ -19,7 +19,7 @@ export let Doctor = {
 
   findDocByName: function(name, displayDocByName){
     $.ajax({
-      url:  `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=or-portland&skip=0&limit=10&user_key=37c943cb133d57f40082b6c642897205`,
+      url:  `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=or-portland&skip=0&limit=10&user_key=${apiKey}`,
 
       type: "GET",
       data: {
