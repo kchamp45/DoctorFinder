@@ -13,7 +13,7 @@ Welcome to a resource to look up doctors for your medical needs. Here you will b
 | return a doctor's detail information | cold  | Dr. A's name, address, phone number, etc.|
 | return error message if no request is rejected| cold | "An error occurred"|
 | return message if no doctors found | bloopa | "Sorry, there is no doctor who fit your criteria" |
-## Karma tests
+## Sample results of search:
 ![Screenshot](https://github.com/kchamp45/DoctorFinder/blob/master/images/Screen%20Shot%202017-09-15%20at%205.33.48%20PM.png)
 
 ## Setup/Installation Requirements
