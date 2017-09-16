@@ -14,7 +14,7 @@ Welcome to a resource to look up doctors for your medical needs. Here you will b
 | return error message if no request is rejected| cold | "An error occurred"|
 | return message if no doctors found | bloopa | "Sorry, there is no doctor who fit your criteria" |
 ## Karma tests
-![Screenshot](https://github.com/kchamp45/GalacticAge/blob/master/images/Screen%20Shot%202017-09-09%20at%202.07.14%20PM.png)
+![Screenshot](https://github.com/kchamp45/DoctorFinder/blob/master/images/Screen%20Shot%202017-09-15%20at%205.33.48%20PM.png)
 
 ## Setup/Installation Requirements
 _Download the following project from the gitHub by tapping "Download" or using 'git clone' from the terminal.  Also, you will need to install npm packages and bower components._
