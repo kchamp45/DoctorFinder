@@ -31,15 +31,18 @@ $(document).ready(function() {
     }
   }
 
+
   $("#med-form").submit(function(e) {
     e.preventDefault();
     let medIssue = $("#problem").val();
     let doctors = Doctor.findDoctors(medIssue, display);
+    $("#result").empty();
   });
 
   $("#name-form").submit(function(e) {
     e.preventDefault();
     let name = $("#name").val();
     let docNames = Doctor.findDocByName(name, displayDocByName);
+    $("#output").empty();
   });
 });
