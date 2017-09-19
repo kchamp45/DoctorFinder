@@ -13,7 +13,7 @@ Welcome to a resource to look up doctors for your medical needs. Here you will b
 | return error message if API request is rejected| bloopa | "An error occurred"|
 | return message if no doctors found | fever | "Sorry, there is no doctor who fit your criteria" |
 ## Sample results of search:
-![Screenshot](https://github.com/kchamp45/DoctorFinder/blob/master/images/Screen%20Shot%202017-09-15%20at%205.33.48%20PM.png)
+![Screenshot](https://github.com/kchamp45/DoctorFinder/blob/master/images/Screen%20Shot%202017-09-18%20at%206.53.55%20PM.png)
 
 ## Setup/Installation Requirements
 _Download the following project from the gitHub by tapping "Download" or using 'git clone' from the terminal.  Also, you will need to install npm packages and bower components. In the application, please create a file called ".env", which stands for "environment" and place the following text into this .env file: exports.apiKey = "your API key". If you have not done so, please create an account with BetterDoctor and obtain an API key. Finally, insert your assigned API key into the space between the quotes(i.e. "your API key")._
