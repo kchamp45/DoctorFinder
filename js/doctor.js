@@ -1,3 +1,5 @@
+var apiKey = require('./../.env').apiKey;
+
 export let Doctor = {
 
   findDoctors: function(medIssue, display) {
@@ -41,7 +43,13 @@ export let Doctor = {
 
       doctors.push(
         {
-          name: doctor.profile.first_name + " " + doctor.profile.last_name
+          name: doctor.profile.first_name + " " + doctor.profile.last_name,
+          street: doctor.practices[0].visit_address.street,
+          city: doctor.practices[0].visit_address.city,
+          state: doctor.practices[0].visit_address.state,
+          zip: doctor.practices[0].visit_address.zip,
+          phone: doctor.practices[0].phones[0].number,
+          newPatient: doctor.practices[0].accepts_new_patients
         });
     });
 
@@ -54,6 +62,7 @@ export let Doctor = {
 
       docNames.push(
         {
+            photo: doc.profile.image_url,
             name: doc.profile.first_name + " " + doc.profile.last_name,
             street: doc.practices[0].visit_address.street,
             city: doc.practices[0].visit_address.city,

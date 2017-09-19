@@ -16,7 +16,7 @@ Welcome to a resource to look up doctors for your medical needs. Here you will b
 ![Screenshot](https://github.com/kchamp45/DoctorFinder/blob/master/images/Screen%20Shot%202017-09-15%20at%205.33.48%20PM.png)
 
 ## Setup/Installation Requirements
-_Download the following project from the gitHub by tapping "Download" or using 'git clone' from the terminal.  Also, you will need to install npm packages and bower components. If you have not done so, please create an account with BetterDoctor and obtain an API key. Then insert this key into "${apiKey}" in the url of the API request._
+_Download the following project from the gitHub by tapping "Download" or using 'git clone' from the terminal.  Also, you will need to install npm packages and bower components. In the application, please create a file called ".env", which stands for "environment" and place the following text into this .env file: exports.apiKey = "your API key". If you have not done so, please create an account with BetterDoctor and obtain an API key. Finally, insert your assigned API key into the space between the quotes(i.e. "your API key")._
 
 ## Support and contact details
 _For any concerns or questions email to: klu@gmail.com_

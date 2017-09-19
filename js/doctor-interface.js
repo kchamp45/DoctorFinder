@@ -1,4 +1,3 @@
-var apiKey = require('./../.env').apiKey;
 
 import {Doctor} from "./../js/doctor.js";
 
@@ -8,12 +7,17 @@ $(document).ready(function() {
     if(doctors.length == 0){
       $("#result").text("Sorry, no doctors match your search criteria");
     }else{
+      let answer = "";
       doctors.forEach(function(doctor) {
-
-        $("#result").append("<li>" + doctor.name + "</li>");
+        if(doctor.newPatient === true) {
+          answer = "yes";
+        } else {
+          answer = "no";
+        }
+        $("#result").append("<li>" + "<strong>"+doctor.name+"</strong>" + "<br>" + doctor.street + "<br>" + doctor.city +  "<br>" + doctor.state + "<br>" + doctor.zip +  "<br>" + doctor.phone + "<br>" + "accepts new patients:" + " " + answer + "<br>" + "</li>");
       });
       }
-    }
+  }
 
   function displayDocByName(docNames) {
     if(docNames.length == 0){
@@ -26,7 +30,8 @@ $(document).ready(function() {
         } else {
           answer = "no";
         }
-        $("#output").append(thisDoc.name + "<br>" + thisDoc.street + "<br>" + thisDoc.city +  "<br>" + thisDoc.state + "<br>" + thisDoc.zip +  "<br>" + thisDoc.phone + "<br>" + "accepts new patients:" + " " + answer + "<br>");
+        $("#output").append("<div class=panel-panel>" +  "<img src="+ thisDoc.photo + "</>"+ "</br>"+ "<div class='panel-heading'>" + thisDoc.name  + "</div>" + "<br>" + "<div class='panel-body'>" + "Address: " + thisDoc.street + ", "+ thisDoc.city + ", " + thisDoc.state + " " + thisDoc.zip + "<br>" + "Phone Number: " + thisDoc.phone + "<br>" + "Accepts New Patients: " + answer + "</div>" + "</div>")
+        // $("#output").append(thisDoc.name + "<br>" + thisDoc.street + "<br>" + thisDoc.city +  "<br>" + thisDoc.state + "<br>" + thisDoc.zip +  "<br>" + thisDoc.phone + "<br>" + "accepts new patients:" + " " + answer + "<br>");
       });
     }
   }
