@@ -31,7 +31,6 @@ $(document).ready(function() {
           answer = "no";
         }
         $("#output").append("<div class=panel-panel>" +  "<img src="+ thisDoc.photo + "</>"+ "</br>"+ "<div class='panel-heading'>" + thisDoc.name  + "</div>" + "<br>" + "<div class='panel-body'>" + "Address: " + thisDoc.street + ", "+ thisDoc.city + ", " + thisDoc.state + " " + thisDoc.zip + "<br>" + "Phone Number: " + thisDoc.phone + "<br>" + "Accepts New Patients: " + answer + "</div>" + "</div>")
-        // $("#output").append(thisDoc.name + "<br>" + thisDoc.street + "<br>" + thisDoc.city +  "<br>" + thisDoc.state + "<br>" + thisDoc.zip +  "<br>" + thisDoc.phone + "<br>" + "accepts new patients:" + " " + answer + "<br>");
       });
     }
   }
